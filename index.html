@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Compiler IDE</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+<header class="header">
+    <h1>Mini Compiler IDE</h1>
+    <p>Scanner • Parser • Expression Engine</p>
+</header>
+
+<section class="editor">
+
+    <div class="toolbar">
+        <input id="fileInput" type="file" />
+        <button onclick="analyzeCode()">Run</button>
+        <button onclick="clearAll()">Clear</button>
+    </div>
+
+    <textarea id="codeInput" placeholder="Write code or upload file..."></textarea>
+
+    <div id="status"></div>
+</section>
+
+<section class="output">
+
+<div class="box">
+<h2>Tokens</h2>
+<div id="tokenOutput"></div>
+</div>
+
+<div class="box">
+<h2>Result</h2>
+<div id="result"></div>
+</div>
+
+</section>
+
+</div>
+
+<script src="parser.js"></script>
+</body>
+</html>
